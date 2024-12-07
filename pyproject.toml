@@ -1,20 +1,18 @@
 [tool.poetry]
-name = "*"
+name = "my_pkg"
 version = "0.0.0"
 description = ""
 authors = ["DanielAvdar <66269169+DanielAvdar@users.noreply.github.com>"]
 license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/DanielAvdar/SchemArrow"
-repository = "https://github.com/DanielAvdar/SchemArrow"
-documentation = "https://github.com/DanielAvdar/SchemArrow"
+
 keywords = [
     "python"
 ]
-packages = [{ include = "todo", from = "." }]
+packages = [{ include = "my_pkg", from = "." }]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.13"
+python = ">=3.9,<4"
 
 
 [tool.poetry.dev-dependencies]
@@ -23,8 +21,8 @@ hypothesis = ">= 6.23.3"
 pre-commit = ">= 2.20.0"
 pytest-cov = ">= 4.0.0"
 mypy = ">= 0.991"
-pytest-parametrization = "^2022"
-ruff = "^0.3.1"
+pytest-parametrization = ">=2022"
+ruff = ">=0.3.1"
 
 
 

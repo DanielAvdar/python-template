@@ -11,11 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pipx install poetry
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: 3.11
           cache: poetry
 
-      - run: poetry install
-      - run: poetry run pre-commit install
-      - run: poetry run pre-commit run --all-files
+      - run: make
+      - run: make check
