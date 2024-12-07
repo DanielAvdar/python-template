@@ -9,7 +9,7 @@ readme = "README.md"
 keywords = [
     "python"
 ]
-packages = [{ include = "todo", from = "." }]
+packages = [{ include = "my_pkg", from = "." }]
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.13"
