@@ -13,11 +13,5 @@ test:
 check:
 	uv run pre-commit run --all-files
 
-build:
-	uv build
-
 coverage:
 	uv run pytest --cov=ml_orchestrator --cov-report=xml
-
-clear:
-	uv venv --python 3.11
