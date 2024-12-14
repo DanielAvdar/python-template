@@ -1,13 +1,23 @@
 .PHONY: help
 
 install:
-	poetry install
-	poetry run pre-commit install
+	uv sync --all-extras --frozen
+	uv tool install pre-commit --with pre-commit-uv --force-reinstall
 
 .PHONY: default
 default: install
 
 test:
-	poetry run pytest
+	uv run pytest
+
 check:
-	poetry run pre-commit run --all-files
+	uv run pre-commit run --all-files
+
+build:
+	uv build
+
+coverage:
+	uv run pytest --cov=ml_orchestrator --cov-report=xml
+
+clear:
+	uv venv --python 3.11

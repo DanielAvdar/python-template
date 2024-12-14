@@ -1,34 +1,31 @@
-[tool.poetry]
-name = "my_pkg"
-version = "0.0.0"
+[project]
+name = "my-pkg"
+dynamic = ["version"]
 description = ""
-authors = ["DanielAvdar <66269169+DanielAvdar@users.noreply.github.com>"]
-license = "MIT"
+authors = [
+    {name = "DanielAvdar", email = "66269169+DanielAvdar@users.noreply.github.com"},
+]
+license = {text = "MIT"}
 readme = "README.md"
+requires-python = ">=3.9,<4"
 
 keywords = [
     "python"
 ]
-packages = [{ include = "my_pkg", from = "." }]
+dependencies = []
 
-[tool.poetry.dependencies]
-python = ">=3.9,<4"
-
-
-[tool.poetry.dev-dependencies]
-pytest = ">= 7.1.2"
-hypothesis = ">= 6.23.3"
-pre-commit = ">= 2.20.0"
-pytest-cov = ">= 4.0.0"
-mypy = ">= 0.991"
-pytest-parametrization = ">=2022"
-ruff = ">=0.3.1"
-
+[tool.hatch.build.targets.sdist]
+only-include = ["my_pkg",]
 
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling", "uv-dynamic-versioning"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "uv-dynamic-versioning"
+
+[project.optional-dependencies]
 
 [tool.ruff]
 line-length = 120

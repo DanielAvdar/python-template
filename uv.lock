@@ -1,0 +1,13 @@
+version = 1
+requires-python = ">=3.9, <4"
+resolution-markers = [
+    "python_full_version < '3.11'",
+    "python_full_version == '3.11.*'",
+    "python_full_version == '3.12.*'",
+    "python_full_version >= '3.13'",
+]
+
+[[package]]
+name = "my-pkg"
+version = "0.0.0.post13.dev0+9bfbbbf"
+source = { editable = "." }
