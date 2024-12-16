@@ -28,6 +28,12 @@ dev = [
 
 [tool.hatch.build.targets.sdist]
 only-include = ["my_pkg",]
+source = "."
+
+[tool.hatch.build.targets.wheel]
+only-include = ["my_pkg",]
+source = "."
+
 
 
 [build-system]
