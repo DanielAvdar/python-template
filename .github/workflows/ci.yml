@@ -2,11 +2,11 @@ name: CI
 on:
   pull_request:
     paths:
-      - 'my_pkg/**'
+      - 'my_pkg/**' # todo: change to your package name
       - 'tests/**'
       - '.github/workflows/ci.yml'
       - 'pyproject.toml'
-      - 'poetry.lock'
+      - 'uv.lock'
   workflow_dispatch:
 jobs:
   tests:

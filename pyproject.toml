@@ -1,9 +1,9 @@
 [project]
-name = "my-pkg"
+name = "my-pkg" # todo: change to your package name
 dynamic = ["version"]
 description = ""
 authors = [
-    {name = "DanielAvdar", email = "66269169+DanielAvdar@users.noreply.github.com"},
+    {name = "DanielAvdar", email = "66269169+DanielAvdar@users.noreply.github.com"}, # todo: change to your name and email
 ]
 license = {text = "MIT"}
 readme = "README.md"
@@ -27,11 +27,11 @@ dev = [
 ]
 
 [tool.hatch.build.targets.sdist]
-only-include = ["my_pkg",]
+only-include = ["my_pkg",] # todo: change to your package name
 source = "."
 
 [tool.hatch.build.targets.wheel]
-only-include = ["my_pkg",]
+only-include = ["my_pkg",] # todo: change to your package name
 source = "."
 
 
@@ -56,7 +56,6 @@ fixable = ["ALL"]
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
-section-order = ["future", "standard-library", "first-party", "local-folder", "third-party"]
 [tool.mypy]
 python_version = "3.11"
 disallow_untyped_defs = true
