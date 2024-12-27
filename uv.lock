@@ -169,7 +169,7 @@ wheels = [
 
 [[package]]
 name = "my-pkg"
-version = "0.0.0.post21.dev0+aa35205"
+version = "0.0.0.post22.dev0+cf37a19"
 source = { editable = "." }
 
 [package.dev-dependencies]
