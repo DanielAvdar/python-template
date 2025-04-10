@@ -19,7 +19,10 @@ check:
 	uv run pre-commit run --all-files
 
 coverage:
-	uv run pytest --cov=ml_orchestrator --cov-report=xml
+	uv run pytest --cov=my_pkg --cov-report=xml # todo: change my_pkg to the actual package name
 
 mypy:
-	uv tool run mypy . --config-file pyproject.toml
+	uv tool run mypy my_pkg --config-file pyproject.toml # todo: chanege my_pkg to the actual package name
+
+doc:
+	uv run sphinx-build -M html docs/source docs/build/
