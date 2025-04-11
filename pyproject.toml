@@ -24,12 +24,14 @@ dev = [
     "mypy==1.13.0",
     "pytest-parametrization>=2022",
     "ruff>=0.8.2",
+
+]
+docs = [
     "sybil[pytest]",
     "sphinx>=8.2.0; python_version >= '3.11'",
     "sphinx>=7.0.0; python_version < '3.11'",
     "sphinx-rtd-theme>=3.0.2",
 ]
-
 [tool.hatch.build.targets.sdist]
 only-include = ["my_pkg",] # todo: change to your package name
 source = "."
