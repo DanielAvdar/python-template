@@ -3,9 +3,9 @@ name = "my-pkg" # todo: change to your package name
 dynamic = ["version"]
 description = ""
 authors = [
-    {name = "DanielAvdar", email = "66269169+DanielAvdar@users.noreply.github.com"}, # todo: change to your name and email
+    { name = "DanielAvdar", email = "66269169+DanielAvdar@users.noreply.github.com" }, # todo: change to your name and email
 ]
-license = {text = "MIT"}
+license = { text = "MIT" }
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -33,20 +33,19 @@ dev = [
     "mypy==1.13.0",
     "pytest-parametrization>=2022",
     "ruff>=0.8.2",
-
+    "sybil[pytest]",
 ]
 docs = [
-    "sybil[pytest]",
     "sphinx>=8.2.0; python_version >= '3.11'",
     "sphinx>=7.0.0; python_version < '3.11'",
     "sphinx-rtd-theme>=3.0.2",
 ]
 [tool.hatch.build.targets.sdist]
-only-include = ["my_pkg",] # todo: change to your package name
+only-include = ["my_pkg", ] # todo: change to your package name
 source = "."
 
 [tool.hatch.build.targets.wheel]
-only-include = ["my_pkg",] # todo: change to your package name
+only-include = ["my_pkg", ] # todo: change to your package name
 source = "."
 
 
@@ -62,13 +61,15 @@ source = "uv-dynamic-versioning"
 
 [tool.ruff]
 line-length = 120
-include = ["pyproject.toml", "tests/**",]
+include = ["pyproject.toml", "tests/**", ]
 
 [tool.ruff.lint]
-select = ["F", "B", "I", "F", "W", "E","A","N"]
+select = ["F", "B", "I", "F", "W", "E", "A", "N", "D"]
 
 fixable = ["ALL"]
-
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D"]
+"docs/*" = ["D"]
 [tool.ruff.lint.isort]
 combine-as-imports = true
 [tool.mypy]

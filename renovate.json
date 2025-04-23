@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "python": {
+    "lockFileMaintenance": {
+      "enabled": true
+    }
+  },
+  "schedule": [
+    "every day"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["uv"],
+      "groupName": false
+
+    }
+  ]
+}
