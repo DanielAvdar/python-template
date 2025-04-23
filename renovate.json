@@ -14,14 +14,14 @@
   "labels": [
     "renovate"
   ],
-  "prTitle": "renovate: {{description}}",
   "packageRules": [
     {
       "matchManagers": [
         "github-actions"
       ],
       "labels": [
-        "github-actions"
+        "github-actions",
+        "renovate"
       ]
     },
     {
@@ -29,7 +29,8 @@
         "pre-commit"
       ],
       "labels": [
-        "pre-commit"
+        "pre-commit",
+        "renovate"
       ]
     },
     {
@@ -41,7 +42,8 @@
         "poetry"
       ],
       "labels": [
-        "python"
+        "python",
+        "renovate"
       ]
     }
   ]
