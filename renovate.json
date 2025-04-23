@@ -9,7 +9,7 @@
     }
   },
   "schedule": [
-    "before 2am every day"
+    "at any time"
   ],
   "packageRules": [
     {
