@@ -13,9 +13,9 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["uv"],
-      "groupName": false
-
+      "matchManagers": [
+        "uv"
+      ]
     }
   ]
 }
