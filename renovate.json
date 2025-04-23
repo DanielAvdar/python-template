@@ -11,10 +11,32 @@
   "schedule": [
     "at any time"
   ],
+  "labels": [
+    "renovate"
+  ],
   "packageRules": [
     {
       "matchManagers": [
         "uv"
+      ]
+    },
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "labels": [
+        "github-actions"
+      ]
+    },
+    {
+      "matchManagers": [
+        "uv",
+        "pip",
+        "poetry",
+        "pipenv"
+      ],
+      "labels": [
+        "python"
       ]
     }
   ]
