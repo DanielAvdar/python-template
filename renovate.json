@@ -14,7 +14,6 @@
   "labels": [
     "renovate"
   ],
-  "prTitle": "renovate: {{description}}",
   "packageRules": [
     {
       "matchManagers": [
