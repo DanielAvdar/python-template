@@ -1,10 +1,10 @@
 version = 1
 revision = 1
-requires-python = ">=3.9, <4"
+requires-python = ">=3.9"
 resolution-markers = [
+    "python_full_version >= '3.11'",
     "python_full_version == '3.10.*'",
     "python_full_version < '3.10'",
-    "python_full_version >= '3.11'",
 ]
 
 [[package]]
@@ -24,8 +24,8 @@ name = "alabaster"
 version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
-    "python_full_version == '3.10.*'",
     "python_full_version >= '3.11'",
+    "python_full_version == '3.10.*'",
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a6/f8/d9c74d0daf3f742840fd818d69cfae176fa332022fd44e3469487d5a9420/alabaster-1.0.0.tar.gz", hash = "sha256:c00dca57bca26fa62a6d7d0a9fcce65f3e026e9bfe33e9c538fd3fbb2144fd9e", size = 24210 }
 wheels = [
@@ -418,13 +418,13 @@ dev = [
     { name = "pytest-cov" },
     { name = "pytest-parametrization" },
     { name = "ruff" },
+    { name = "sybil", extra = ["pytest"] },
 ]
 docs = [
     { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "sphinx", version = "8.2.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "sphinx-rtd-theme" },
-    { name = "sybil", extra = ["pytest"] },
 ]
 
 [package.metadata]
@@ -439,12 +439,12 @@ dev = [
     { name = "pytest-cov", specifier = ">=4.0.0" },
     { name = "pytest-parametrization", specifier = ">=2022" },
     { name = "ruff", specifier = ">=0.8.2" },
+    { name = "sybil", extras = ["pytest"] },
 ]
 docs = [
     { name = "sphinx", marker = "python_full_version < '3.11'", specifier = ">=7.0.0" },
     { name = "sphinx", marker = "python_full_version >= '3.11'", specifier = ">=8.2.0" },
     { name = "sphinx-rtd-theme", specifier = ">=3.0.2" },
-    { name = "sybil", extras = ["pytest"] },
 ]
 
 [[package]]
