@@ -14,6 +14,7 @@
   "labels": [
     "renovate"
   ],
+  "prTitle": "renovate: {{description}}",
   "packageRules": [
     {
       "matchManagers": [
@@ -31,9 +32,8 @@
     {
       "matchManagers": [
         "uv",
-        "pip",
-        "poetry",
-        "pipenv"
+        "pip"
+
       ],
       "labels": [
         "python"
