@@ -8,6 +8,9 @@
       "enabled": true
     }
   },
+  "pre-commit": {
+    "enabled": true
+  },
   "schedule": [
     "at any time"
   ],
