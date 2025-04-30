@@ -42,7 +42,7 @@
     },
     {
       "matchManagers": [
-        "uv-lock"
+         "pep621", "pep723"
       ],
       "labels": [
         "uv-lock",
