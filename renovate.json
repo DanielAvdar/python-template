@@ -3,12 +3,13 @@
   "extends": [
     "config:recommended"
   ],
-  "python": {
-    "lockFileMaintenance": {
-      "enabled": true,
-      "automerge": true
-
-    }
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": [
+      "at any time"
+    ],
+    "groupName": "uv-lock"
   },
   "automerge": true,
   "pre-commit": {
@@ -41,14 +42,10 @@
     },
     {
       "matchManagers": [
-        "pip-compile",
-        "pip_requirements",
-        "pip_setup",
-        "pipenv",
-        "poetry"
+        "uv-lock"
       ],
       "labels": [
-        "python",
+        "uv-lock",
         "renovate"
       ]
     }
