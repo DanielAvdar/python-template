@@ -1,8 +1,6 @@
-name: Publish docs GH Pages
+name: Doc-Test
 on:
-  pull_request: # todo: remove this after testing
-  release:
-    types: [ published ]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -22,8 +20,7 @@ jobs:
           enable-cache: true
       - run: uv python install 3.12
 
-      - run: make install-docs
-      - run: make doc
+      - run: make doctest
 
 #      - name: Deploy
 #        uses: peaceiris/actions-gh-pages@v4

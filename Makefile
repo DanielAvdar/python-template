@@ -5,8 +5,7 @@ default: install
 
 install:
 	uv sync --all-extras --all-groups --frozen
-	uv tool install pre-commit --with pre-commit-uv --force-reinstall
-	uv run pre-commit install
+	uvx pre-commit install
 
 install-docs:
 	uv sync --group docs --frozen --no-group dev
@@ -16,34 +15,26 @@ update:
 	uvx pre-commit autoupdate
 	$(MAKE) install
 
-test:
+test: install
 	uv run pytest
 
-check:
-	uv run pre-commit run --all-files
+check: install
+	uvx  pre-commit run --all-files
 
-coverage:
+coverage: install
 	uv run pytest --cov=my_pkg --cov-report=xml # todo: change my_pkg to the actual package name
 
-cov:
+cov: install
 	uv run pytest --cov=my_pkg --cov-report=term-missing # todo: change my_pkg to the actual package name
 
-mypy:
-	uv tool run mypy my_pkg --config-file pyproject.toml
+mypy: install
+	uv run mypy my_pkg --config-file pyproject.toml
 # todo: chanege my_pkg to the actual package name
 
+doctest: install-docs doc
+
 doc:
-	uv run sphinx-build -M html docs/source docs/build/
-
-
-doctest:
-	uv run sphinx-build -M doctest docs/source docs/build/ -W --keep-going
-
-# Optional target that builds docs but ignores warnings
-doc-build:
-	uv run sphinx-build -M html docs/source docs/build/
-
-
-doc: doctest doc-build
+	uv run --no-sync sphinx-build -M doctest docs/source docs/build/ -W --keep-going --fresh-env
+	uv run --no-sync sphinx-build -M html docs/source docs/build/ -W --keep-going --fresh-env
 
 check-all: check test mypy doc

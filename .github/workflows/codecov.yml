@@ -17,8 +17,7 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
-      - run: uv python install 3.11
-      - run: make
+      - run: uv python install 3.12
       - run: make coverage
       - uses: codecov/codecov-action@v5
         with:

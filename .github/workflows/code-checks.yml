@@ -4,7 +4,7 @@ on:
   pull_request:
   workflow_dispatch:
 jobs:
-  lint:
+  pre-commit-hooks:
     name: Code Check
     runs-on: ubuntu-latest
 
@@ -13,7 +13,15 @@ jobs:
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
-      - run: uv python install 3.11
-      - run: make
+      - run: uv python install 3.12
       - run: make check
+  typecheck:
+    name: Type Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv python install 3.12
       - run: make mypy
