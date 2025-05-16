@@ -11,14 +11,14 @@ on:
   workflow_dispatch:
 jobs:
   upload-coverage-report:
+    name: Upload Report
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
-      - run: uv python install 3.11
-      - run: make
+      - run: uv python install 3.12
       - run: make coverage
       - uses: codecov/codecov-action@v5
         with:
