@@ -5,7 +5,6 @@ on:
   workflow_dispatch:
 jobs:
   pre-commit-hooks:
-    name: Code Check
     runs-on: ubuntu-latest
 
     steps:
@@ -16,7 +15,7 @@ jobs:
       - run: uv python install 3.12
       - run: make check
   typecheck:
-    name: Type Check
+    name: Types Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

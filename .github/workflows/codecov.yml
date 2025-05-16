@@ -11,6 +11,7 @@ on:
   workflow_dispatch:
 jobs:
   upload-coverage-report:
+    name: Upload Report
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
