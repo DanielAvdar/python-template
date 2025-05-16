@@ -25,15 +25,13 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "pytest>=7.1.2",
+    "pytest>=8.3.5",
     "hypothesis>=6.23.3",
-    "pre-commit>=2.20.0",
-    "pre-commit-uv>=4",
     "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.26.0",
     "mypy==1.15.0",
     "pytest-parametrization>=2022",
-    "ruff>=0.8.2",
-    "sybil[pytest]",
+
 ]
 docs = [
     "sphinx>=8.2.0; python_version >= '3.11'",
