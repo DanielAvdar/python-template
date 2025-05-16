@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Thank you for your interest in contributing to "my-package". **Note:** Remember to update the package name if it
+Thank you for your interest in contributing to "my-pkg". # TODO: Remember to update the package name if it
 changes.
 
 ## Prerequisites
