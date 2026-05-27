@@ -499,7 +499,7 @@ wheels = [
 
 [[package]]
 name = "hypothesis"
-version = "6.153.2"
+version = "6.153.6"
 source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.12'",
@@ -510,9 +510,9 @@ dependencies = [
     { name = "exceptiongroup", marker = "python_full_version == '3.10.*'" },
     { name = "sortedcontainers", marker = "python_full_version >= '3.10'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/be/48/b6fcb59469f237a75592165d986fbfc57361279df5fe20b951fcc766ba2c/hypothesis-6.153.2.tar.gz", hash = "sha256:6f53e84b51c1f6c4173d6698880ddc2d05947ca649caa552afa26a01c2d964c1", size = 474531, upload-time = "2026-05-27T03:07:59.929Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e8/c3/8c661bb893725eedeb003e85f3050274da2d77abf0847c4d61b4af53969c/hypothesis-6.153.6.tar.gz", hash = "sha256:8f7663251c57c9ee1fb6c0e919a6027cbda98d52b210dea441957d11d644c271", size = 475551, upload-time = "2026-05-27T17:43:32.524Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a7/4c/173899cce4c79d17f6b9eceec262fa0900d32506ee5ce7f4034bb519de6a/hypothesis-6.153.2-py3-none-any.whl", hash = "sha256:db489369f89ea7aa724052f4725d3839f0f9d42fed1bb92d279a221a3585e215", size = 540840, upload-time = "2026-05-27T03:07:56.942Z" },
+    { url = "https://files.pythonhosted.org/packages/bf/33/f3ec54e6fb89c2279f0dd911ba512321e70038e447d1984c35fad61840f8/hypothesis-6.153.6-py3-none-any.whl", hash = "sha256:a892e3460e4dd8cfb8525682d8901be8f5e2d2c7b352359b71a44e5def2b89c8", size = 541876, upload-time = "2026-05-27T17:43:30.807Z" },
 ]
 
 [[package]]
@@ -800,7 +800,7 @@ source = { editable = "." }
 [package.dev-dependencies]
 dev = [
     { name = "hypothesis", version = "6.141.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "hypothesis", version = "6.153.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "hypothesis", version = "6.153.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "mypy" },
     { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "pytest", version = "9.0.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
