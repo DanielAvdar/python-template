@@ -36,7 +36,7 @@ dev = [
 docs = [
     "sphinx>=8.2.0; python_version >= '3.11'",
     "sphinx>=7.0.0; python_version < '3.11'",
-    "sphinx-rtd-theme>=3.0.2",
+    "sphinx-rtd-theme>=3.1.0",
 ]
 [tool.hatch.build.targets.sdist]
 only-include = ["my_pkg", ] # todo: change to your package name
